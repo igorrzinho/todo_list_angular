@@ -1,14 +1,14 @@
-<form [formGroup]="todosForm" (ngSubmit)="handleCreateNewTodo">
+<form [formGroup]="todosForm" (ngSubmit)="handleCreateNewTodo()">
     <section class="todo_form_card">
         <h1 class="todo_form_title">Adicionar tarefa</h1>
-        <mat-for-field color="accent" apparence="outline" class="todo_form_input">
+        <mat-form-field color="accent" apparence="outline" class="todo_form_input">
             <mat-label>Nome</mat-label>
             <input matInput type="text" formControlName="title">
-        </mat-for-field>
-        <mat-for-field color="accent" apparence="outline" class="todo_form_input">
+        </mat-form-field>
+        <mat-form-field color="accent" apparence="outline" class="todo_form_input">
             <mat-label>Descriçao</mat-label>
-            <textarea matInput type="text" formControlName="decription"></textarea>
-        </mat-for-field>
+            <textarea matInput type="text" formControlName="description"></textarea>
+        </mat-form-field>
         <div class="todo_form_action">
             <button
                 mat-raised-button class="todo_form_sucess_btn" type="submit"
@@ -16,7 +16,7 @@
             Adicionar
         </button>
         <button
-                mat-raised-button color="warning" type="button"
+                mat-raised-button class="btn_form_cancel" type="button" (click)="handleCloseModal()"
             >
             Cancelar
         </button>
