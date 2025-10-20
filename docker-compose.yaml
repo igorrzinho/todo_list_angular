@@ -1,0 +1,8 @@
+services:
+  todo-list:
+    container_name: todolist-angular
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 4200:4200
